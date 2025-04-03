@@ -14,9 +14,6 @@ public class Unit(string code) : ValueObject
         return unit;
     }
 
-    // Undefined
-    public static Unit Units => new("U");
-
     // Mass - Metric
     public static Unit Milligram => new("MG");
     public static Unit Gram => new("G");
@@ -62,7 +59,7 @@ public class Unit(string code) : ValueObject
     // Temperature - Imperial
     public static Unit Fahrenheit => new("°F");
 
-    public string Code { get; private set; } = string.IsNullOrWhiteSpace(code) ? "Undefined" : code;
+    public string Code { get; private set; } = string.IsNullOrWhiteSpace(code) ? "Units" : code;
 
     public static implicit operator string(Unit unit)
     {
@@ -116,7 +113,6 @@ public class Unit(string code) : ValueObject
             yield return Inch;
             yield return Foot;
             yield return Yard;
-            yield return Foot;
             yield return Mile;
             yield return Fahrenheit;
         }
