@@ -21,7 +21,7 @@ internal static class DependencyInjection
         services.AddTransient<IMainView, MainForm>();
 
         // Presenters
-        services.AddTransient<SplashPresenter>();
+        services.AddTransient<ISplashPresenter, SplashPresenter>();
 
         return services;
     }

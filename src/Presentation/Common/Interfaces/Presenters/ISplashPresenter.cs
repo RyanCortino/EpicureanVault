@@ -1,3 +1,8 @@
-﻿namespace EpicureanVault.Presentation.Common.Interfaces.Presenters;
+﻿using EpicureanVault.Presentation.Common.Interfaces.Views;
 
-public interface ISplashPresenter { }
+namespace EpicureanVault.Presentation.Common.Interfaces.Presenters;
+
+public interface ISplashPresenter
+{
+    void InitializePresenter(ISplashView view);
+}
